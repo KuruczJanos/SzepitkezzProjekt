@@ -22,11 +22,9 @@
                                 <th scope='col'>-------</th>
                                 </tr>
                         </thead>";
-                        // Adatok megjelenítése táblázatban
                         while($row = $result->fetch_assoc()) {
                                 echo "<tbody>";
                                 echo "<tr>";
-                                // echo "<td>" . $row["AdAz"] . "</td>";
                                 echo "<td scope='row'>" . $row["StoreName"] . "</td>";
                                 echo "<td scope='row'>" . $row["StoreEmail"] . "</td>";
                                 echo "<td scope='row'>" . $row["StoreMobile"] . "</td>";
@@ -82,19 +80,10 @@
                                                         </div>
                                                         </div>
                                                         </td>";
-                                // echo "<td scope='row'>" . '<form action="" method="post">
-                                //                                 <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#modifyModal">
-                                //                                 Módosítás
-                                //                                 </button>
-                                //                                 </form>' . "</td>";
                                 echo "<td scope='row'><form action='../admin/adminDeleteAds.php' method='post'>
                                 <input type='hidden' name='ad_id' value='" . $row['AdAz'] . "'>
                                 <button class='btn btn-secondary' type='submit'>Törlés</button>
                                 </form></td>";
-                                // echo "<td scope='row'><form action="" method="post">
-                                //                                 <input type="hidden" name="ad_id" value="' . $row['AdAz']; . '">
-                                //                                 <button class="btn btn-secondary" type="submit">Törlés</button>
-                                //                                 </form>"</td>";
                                 echo "</tr>";
                                 echo "</tbody>";
                         }

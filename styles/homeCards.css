@@ -3,7 +3,7 @@
     grid-template-columns: repeat(3, 1fr); /* Minden oszlop 1fr széles lesz */
     gap: 20px;
     padding: 20px;
-    width: 100%; /* Hozzáadva a teljes szélesség eléréséhez */
+    width: 100%; 
   }
   
   .card {

@@ -1,12 +1,12 @@
 <?php
   
-    echo '
-        <div class="col d-flex">
-            <div class="card-deck ">
+    echo '   
+        <div class="card">
+            <div class="card-deck">
                 <img src="' . $row["UserPhoto"] . '" class="card-img-top" alt="..." style="width: 25rem;"  >
                 <div class="card-body">
-                    <h5 class="card-title">Felhasználó Azonositó: ' . $row["UserAz"] . '</h5>
-                    <p class="card-text">
+                    <h3 class="card-title">Felhasználó Azonositó: ' . $row["UserAz"] . '</h3>
+                    <h4 class="card-text">
                         Felhasználó neve: '. $row["UserName"] .'<br>
                         Teljes neve: '. $row["UserFullName"] .'<br>
                         Jelszava: '. $row["UserPassword"] .'<br>
@@ -14,15 +14,16 @@
                         Telefonszáma: '. $row["UserMobile"] .'<br>
                         Profil tipusa: '. $row["Type"] .'<br>
                         Helyreállitási kód: '. $row["ResetCode"] .'<br>
-                    </p>
+                    </h4>
                 </div>
                 <div class="card-footer">
                     <small class="text-muted">Regisztráció dátuma</small><br>
-                    <a href="#" class="btn btn-primary mt-2">Módositás</a>
-                    <a href="#" class="btn btn-primary mt-2">Törlés</a>
-                    <a href="#" class="btn btn-primary mt-2">Üzenet</a>
+                    <a href="#" class="btn btn-primary mt-2"><h4>Módositás</h4></a>
+                    <a href="#" class="btn btn-primary mt-2"><h4>Törlés</h4></a>
+                    <a href="#" class="btn btn-primary mt-2"><h4>Üzenet</h4></a>
                 </div>
-            </div>
-        </div>';
+
+        </div>
+        </div><br>';
 
 ?>

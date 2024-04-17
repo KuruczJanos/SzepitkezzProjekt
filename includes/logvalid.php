@@ -1,7 +1,7 @@
 ﻿<?php
-// ob_start();
+
 session_start();
-// include ('header.php');
+
 include('connect.php');
 if(isset($_POST['LogEmailInput']) && !empty($_POST['LogEmailInput']) && isset($_POST['LogPassInput']) && !empty($_POST['LogPassInput'])){
 
@@ -32,8 +32,7 @@ if($num == 1)
         $ActiveUserPhoto = $rows['UserPhoto'];
         $ActiveUserType = $rows['Type'];
     }
-//$_SESSION['results'] = $result['UserAz'];
-//$_SESSION['UserEmail'] = $LogEmail;
+
 $_SESSION['UserAz'] = $ActiveUserAz;
 $_SESSION['UserName'] = $ActiveUserName;
 $_SESSION['UserFullName'] = $ActiveUserFullName;
@@ -54,21 +53,15 @@ $_SESSION['Type'] = $ActiveUserType;
         echo  
         '<script>alert("A felhasználó név vagy a jelszó hibás!")</script>';
         }
-//print 'Üdv, '.$adatok['UserEmail'].''; //belépett falhasználó, ha kiírja a nevét akkor működik
-//setcookie("UserEmail", "$LogEmail");
-//echo  " a user neve: $_SESSION ";
+
 }
 else
 {
 echo
-'<script>alert("A felhasználó név vagy a jelszó hibás!")</script>';
-//"<div class='form'>
-//<h3>A felhasználó név vagy a jelszó hibás!</h3>
-//<br/>Kattints ide az oldal  <a href='../src/home.php'>újratöltéséért!</a></div>";
+exit('<script>alert("A felhasználó név vagy a jelszó hibás!") history.back();</script>');
+
 }
-//else if(isset($_SESSION["UserEmail"])){ //Ha sikerült belépni a  belső tartalom
-    //print 'Üdv, '.$_SESSION['UserEmail'].''; //belépett falhasználó, ha kiírja a nevét akkor működik
-//}
+
 }
 $conn->close();
 ?>

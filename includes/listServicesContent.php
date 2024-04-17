@@ -4,21 +4,23 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap" rel="stylesheet">
-<div class="container-fluid">
+
+
+<div class="container-fluid border m-10">
 <?php 
     include ('header.php');
     include ('connect.php');
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (isset($_POST["listService"])){
-            // echo $_POST["listService"];
         $stmt = $conn->prepare("SELECT * FROM ads WHERE ServiceType = ? ");
         $stmt->bind_param("s", $_POST['listService']);
         $stmt->execute();
         $result = $stmt->get_result();
 
             if ($result->num_rows > 0) {
-                echo '<div class="table-responsive">
-                        <table class="table">
+                echo '
+                        <div class="table-responsive">
+                        <table class="table table-bordered">
                         <thead class="thead-dark">
                             <tr>
                                 <th scope="col">Üzlet neve </th>
@@ -41,7 +43,7 @@
                                         <td scope='row'>" . $row["StoreAddress"] . "</td>
                                         <td scope='row'>" . $row["StoreDescription"] . "</td>
                                         <td scope='row'>
-                                            <img src='" . $row["StoreImageURL"] . "' alt='Store Image' width='200' height='200'></td>
+                                            <img src='" . $row["StoreImageURL"] . "' alt='Store Image' width=200 height= 200></td>
                                         <td scope='row'><button type='button' class='btn btn-secondary' data-toggle='modal' data-target='#EmailModal'>
                                             Üzenet</button>
                                                 <div class='modal fade' id='EmailModal' tabindex='-1' role='dialog' aria-labelledby='EmailModalLabel' aria-hidden='true'>
@@ -68,7 +70,8 @@
                                     </tbody>";
                         }
                         echo "</table>";
-                        echo '</div><br>';
+                        echo '
+                        </div><br>';
                         } else {
                         echo "Nincs elérhető adat.";
                         }
@@ -101,4 +104,4 @@
       integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
       crossorigin="anonymous"
     ></script>
-    <script src="../scripts/functions.js"></script> 
+<script src="../scripts/functions.js"></script> 

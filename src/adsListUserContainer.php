@@ -1,5 +1,8 @@
+
+        <h1 class="text-center mt-4">Feltöltött hirdetéseim</h1>
+    
      <div class="container-fluid col border m-10">
-                <h1 class="text-center mt-4">Feltöltött hirdetéseim</h1>
+               
                         <?php
                         include ('connect.php');
                         // Adatok lekérése az adatbázisból
@@ -26,11 +29,9 @@
                                 <th scope='col'>-------</th>
                                 </tr>
                         </thead>";
-                        // Adatok megjelenítése táblázatban
                         while($row = $result->fetch_assoc()) {
                                 echo "<tbody>";
                                 echo "<tr>";
-                                // echo "<td>" . $row["AdAz"] . "</td>";
                                 echo "<td scope='row'>" . $row["StoreName"] . "</td>";
                                 echo "<td scope='row'>" . $row["StoreEmail"] . "</td>";
                                 echo "<td scope='row'>" . $row["StoreMobile"] . "</td>";
@@ -86,19 +87,10 @@
                                                         </div>
                                                         </div>
                                                         </td>";
-                                // echo "<td scope='row'>" . '<form action="" method="post">
-                                //                                 <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#modifyModal">
-                                //                                 Módosítás
-                                //                                 </button>
-                                //                                 </form>' . "</td>";
                                 echo "<td scope='row'><form action='../includes/deleteUserAds.php' method='post'>
                                 <input type='hidden' name='ad_id' value='" . $row['AdAz'] . "'>
                                 <button class='btn btn-secondary' type='submit'>Törlés</button>
                                 </form></td>";
-                                // echo "<td scope='row'><form action="" method="post">
-                                //                                 <input type="hidden" name="ad_id" value="' . $row['AdAz']; . '">
-                                //                                 <button class="btn btn-secondary" type="submit">Törlés</button>
-                                //                                 </form>"</td>";
                                 echo "</tr>";
                                 echo "</tbody>";
                         }
@@ -111,6 +103,3 @@
                         $conn->close();
                         ?>
         </div>  
-        <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5+Yo4U4r3+6G8z6XvBuv2KQOel9ZOp5Lym9+JvoV" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-AkGnakAk4EZq8vEtj0F/1pExbx1v1lBk7w+7uZ0W+COlf3mrKPrZf8wD1JFOIMxZ" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-LIt051sstqu21ndwYT7ZsZk3KL9RjH8D6Lh0N8OagCKgljK/kzOA8hjWzJ4yPGNp" crossorigin="anonymous"></script> -->

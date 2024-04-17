@@ -1,5 +1,5 @@
 <?php
-// ob_start();
+
 session_start();
 include('connect.php');
 
@@ -10,14 +10,8 @@ if(isset($_POST['UpdateButton'])){
     $UpdateUserRePassword = $_POST['UpdateUserRePassword'];
     $UserAzUP = $_SESSION['UserAz'];
     $UserPasswordUP = $_SESSION['UserPassword'];
-//echo $UpdateUserMobile; Működik
-//echo $UpdateUserPassword; Működik
-//echo $UpdateUserRePassword; Működik
 
-//echo $_SESSION['UserMobile'];
-//echo ' ';
-//echo $UpdateUserMobile;
-if($UpdateUserMobile != $_SESSION['UserMobile']){//strlen($UpdateUserMobile) >=11 szöveghossz feltétel
+if($UpdateUserMobile != $_SESSION['UserMobile']){
     $UPDATEMOBILE = "UPDATE users SET UserMobile = (?) WHERE UserAz = '$UserAzUP'  ";
     $stmt = $conn->prepare($UPDATEMOBILE);
     $stmt -> bind_param('s', $UpdateUserMobile);
@@ -32,7 +26,7 @@ if($UpdateUserPassword != $UserPasswordUP && $UpdateUserPassword==$UpdateUserReP
     $stmt -> execute();
     $stmt -> close();
 }else{        echo  
-    '<script>alert("A megadott jelszavak nem egyeznek!")</script>';
+    '<script>alert("A megadott jelszavak nem egyeznek!") history.back();</script>';
 }
 header ('Location: ../includes/user.php');
 

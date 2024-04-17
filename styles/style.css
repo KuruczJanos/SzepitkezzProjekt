@@ -1,10 +1,11 @@
 /* @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap"); */
+
 .container{font-family: 'Times New Roman';}
 
-.buttons{
-    /* align-items: center; */
+/* .buttons{
+    
     display: flex;
-}
+} */
 .home {
     float: left;
     height: 50px;
@@ -44,58 +45,43 @@ li img{
         clear: both;
       }
   }
-  .grid-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Minden oszlop 1fr széles lesz */
-    gap: 20px;
-    padding: 20px;
-    overflow: auto;
-  }
+
   
-  .card{
-    -webkit-transition: transform 0.3s ease; /* Safari és Chrome */
-    background-color: #ffffff;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    float: left;
-    width: calc(33.333% - 20px); /* Példa: Három kártya egy sorban */
-    margin-right: 20px; /* Választható: A kártyák közötti térköz */
-  }
-  .card:last-child {
-    margin-right: 0; /* Az utolsó kártya nem kap margin-right-et */
-  }
+  .card {
+    border-radius: 8px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    transition: all 0.1s ease; 
+    
+    margin: 10px;
+}
+.card:hover {
+    transform: translateY(5px); 
+}
+@media (max-width: 767px) {
+
+  .card {
+    border: 5px solid #007bff; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    transition: all 0.3s ease; 
+    width: 80%; 
+    margin: 10px auto; 
+}
+.card:hover {
+    transform: translateY(-5px); 
+}
+.card .btn {
+    width: 80%; 
+    max-width: 100%; 
+    flex-wrap: wrap; 
+    color: #fff; 
+    font-weight: bold; 
+    transition: all 0.5s ease; 
+}
+.card .btn:hover {
+    background-color: #080b0e; 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+}
   
-  .card:hover {
-    transform: translateY(-5px);
-  }
-  
-  .card img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 8px 8px 0 0;
-    /* max-height: 200px; Vagy más méret */
-  }
-  
-  .card-content {
-    padding: 20px;
-  }
-  
-  .card-content h3 {
-    margin: 0;
-    font-size: 20px;
-    color: #333333;
-  }
-  
-  /* .card-content p {
-    margin: 10px 0 0;
-    font-size: 16px;
-    color: #666666;
-  } */
-  .grid-container {
-    content: "";
-    display: table;
-    clear: both;
-  }
+

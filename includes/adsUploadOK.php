@@ -32,21 +32,10 @@ if (mysqli_connect_error()){
                     $stmt->execute();
                     $stmt->close();
                     $conn->close();
-                    // echo 'A fájl sikeresen feltöltve.';
+                    
                     exit("<script>alert('A fájl sikeresen feltöltve.'); window.location.href = 'user.php';</script>");
-                    // echo "<pre>";
-                    // print_r($_REQUEST);
-                    // echo "</pre>";
-                    // echo "UpStoreName: " . $UpStoreName . "   ";
-                    // echo "UpStoreType: " .$UpStoreType . "   ";
-                    // echo "UpStoreUserAz: " . $_SESSION["UserAz"] . "   ";
-                    // echo "ImgDatas:  " . $ImgFileURL . "    " . $ImgFileName . "   ";
-                    // echo "FileToUpload: " . $FileToUpload . "  ";
                 }else{
                     echo "<script>alert('Sajnálom, a képet nem sikerült feltölteni.');</script>";
-                    // echo "<pre>";
-                    // print_r($_FILES);
-                    // echo "</pre>";
                     exit();
                 }
                 }

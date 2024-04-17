@@ -1,9 +1,10 @@
 
-<div class="container-fluid banner">
-<div class="container-fluid navbar-header">
-  <a href="" class="home navbar-brand"><b>Szépitkezz</b></a>
+<div class="col container-fluid banner">
+<img src="../img/content/logo2.png" alt="" class=" img-fluid cols" style="width: 40%">
+<div class="container-fluid navbar-header align-items-center">
+  
 </div>
-<nav class="container-fluid navbar navbar-expand-lg navbar-dark">
+<nav class="row container-fluid navbar navbar-expand-lg navbar-dark">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>

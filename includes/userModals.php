@@ -30,15 +30,7 @@
     
     </form>
     </div>
-      <!-- <form name="UpdateUserForm" action="updateuserprofile.php" method="POST">
-        Mobiltelefonszám ellenőrzés hozzáadása kell még
-        <input type="tel" placeholder="Telefonszám" id="UpdateUserMobile" name="UpdateUserMobile" class="form-control mt-3" minlength = 11>
-        <input type="password" placeholder="Jelszó" id="UpdateUserPassword" name="UpdateUserPassword" class="form-control mt-3" >
-        <input type="password" placeholder="Jelszó megerősítése" id="UpdateUserRePassword" name="UpdateUserRePassword" class="form-control mt-3">
-        <br>
-        <input type="submit" class="btn btn-primary mt-3" name="UpdateButton" value="Mentés">
-        <br><br>
-      </form> -->
+
     </div>
     <div class="modal-footer"> </div>
   </div>
