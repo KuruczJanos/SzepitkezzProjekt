@@ -1,0 +1,118 @@
+.bodycontent {
+    background-color: #155492;
+}
+.card {
+    border-radius: 8px; /* Lekerekített border asztali nézetben */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Árnyék */
+    transition: all 0.3s ease; /* Animáció */
+    margin-bottom: 20px; /* Alatti margin */
+}
+.card-deck {
+    margin: 10px; /* Körbe margin 10px */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+.card-footer .btn {
+    flex: 1; /* Az elemek oszlopok között egyenletesen elosztják a rendelkezésre álló helyet */
+    margin: 5px; /* Gombok közötti térköz */
+    max-width: 100%; /* Gombok teljes szélessége asztali nézetben */
+}
+.card-footer .btn:hover {
+    background-color: #080b0e; /* Háttérszín kiemelés egér fölé húzáskor */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); /* Árnyék */
+}
+.header {
+    background: url(../img/content/bannerwallpapper.jpg) no-repeat;
+    background-size: cover; /* 80%-os szélesség az asztali nézetben */
+    background-position: center; /* Középre igazított háttérkép */
+    width: 100%; /* A banner teljes szélessége */
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Középre igazítás */
+}
+
+.user img {
+    height: 150px; /* Profilkép magassága asztali nézetben */
+    width: 150px; /* Profilkép szélessége asztali nézetben */
+}
+.user h1 {
+    margin-left: 20px; /* Bal oldali margó a h1 elemhez */
+}
+.navbar {
+    display: flex;
+    justify-content: space-around; /* Elemek közötti hely egyenletesen */
+    align-items: center;
+    flex-wrap: wrap; /* Elemek egymás alá rendezése mobil nézetben */
+}
+
+.navbar .btn {
+    flex: 1; /* Az elemek oszlopok között egyenletesen elosztják a rendelkezésre álló helyet */
+    margin: 5px; /* Gombok közötti térköz */
+    max-width: 100%; /* Gombok teljes szélessége asztali nézetben */
+}
+
+.navbar .btn {
+    color: #fff; /* Szöveg színe fehér */
+    font-weight: bold; /* Félkövér betűstílus */
+    transition: all 0.5s ease; /* Animáció */
+}
+
+.navbar .btn:hover {
+    background-color: #080b0e; /* Háttérszín kiemelés egér fölé húzáskor */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); /* Árnyék */
+}
+@media (max-width: 767px) {
+    .bodycontent {
+        background-color: #155492;
+    }
+    .navbar.user .img {
+        width: 80%; 
+        max-width: 100%; /* Mobil nézetben a profilkép teljes szélességében jelenjen meg */
+    }
+    .navbar .btn {
+        width: 80%; /* Gombok 80%-a a rendelkezésre álló helyből */
+        max-width: 100%; /* Gombok teljes szélessége mobilnézetben */
+        flex-wrap: wrap; /* Elemek egymás alá rendezése mobil nézetben */
+        color: #fff; /* Szöveg színe fehér */
+        font-weight: bold; /* Félkövér betűstílus */
+        transition: all 0.5s ease; /* Animáció */
+    }
+    .user img {
+        height: 50%; /* Profilkép magassága mobil nézetben (50%-a az ős elemnek) */
+        width: 50%; /* Profilkép szélessége mobil nézetben (50%-a az ős elemnek) */
+    }
+    
+   .logoutbtn {
+        width: 80%; /* Gomb szélességének 50%-a mobil nézetben */
+        margin: 0 auto; /* Középre igazítás */
+    }
+    .card {
+        border: 5px solid #007bff; /* Border 5px mobil nézetben */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Árnyék */
+        transition: all 0.3s ease; /* Animáció */
+        width: 80%; /* Kártya szélessége 80%-a */
+        margin: 10px auto; /* Középre igazítás és körbe margin 10px */
+    }
+    .card:hover {
+        transform: translateY(-5px); /* Kiemelés egér fölé húzáskor */
+    }
+    .card-footer .btn {
+        width: 80%; /* Gombok 80%-a a rendelkezésre álló helyből */
+        max-width: 100%; /* Gombok teljes szélessége mobilnézetben */
+        flex-wrap: wrap; /* Elemek egymás alá rendezése mobil nézetben */
+        color: #fff; /* Szöveg színe fehér */
+        font-weight: bold; /* Félkövér betűstílus */
+        transition: all 0.5s ease; /* Animáció */
+    }
+    .card-footer .btn:hover {
+        background-color: #080b0e; /* Háttérszín kiemelés egér fölé húzáskor */
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); /* Árnyék */
+    }
+
+}
+  
